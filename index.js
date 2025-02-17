@@ -23,7 +23,7 @@ function Jouer(){
     tabE.forEach(element => {
         element.addEventListener('click', function(){
             if (tour == 1){
-                if (this.textContent == ''){
+                if (this.textContent == '' && jeu_actif){
                     this.textContent = 'X';
                     tabV[parseInt(this.id)] = 'X';
                     texte_info.textContent = 'Au tour du joueur O de jouer'
@@ -31,7 +31,7 @@ function Jouer(){
                 }
             }
             else{
-                if (this.textContent == ''){
+                if (this.textContent == '' && jeu_actif){
                     this.textContent = 'O';
                     tabV[parseInt(this.id)] = 'O';
                     texte_info.textContent = 'Au tour du joueur X de jouer'
@@ -42,6 +42,7 @@ function Jouer(){
             if(jeu_actif){
                 Tester_victoire_X(tabV)
                 Tester_victoire_O(tabV)
+                Egalite(tabE)
             }
         });
     });
@@ -222,5 +223,18 @@ function Tester_victoire_O(tabV){
         return tab_vic;
         
 }}
+
+// Fonction en cas d'égalité
+function Egalite(tabE){
+
+    const allFilled = [...tabE].every(cell => cell.textContent !== '');
+    if (allFilled) {
+        texte_info.textContent = 'Egalité';
+        jeu_actif = false;
+    }
+}
+
+
+
 
 Jouer()
