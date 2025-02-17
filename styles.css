@@ -1,8 +1,10 @@
-#div1{
+body {
     display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut */
+    text-align: center; /* Centre le texte */
 }
 
 tr {
@@ -36,6 +38,8 @@ table {
     width: 500px;
 }
 
-h1 {
+h1,h2 {
     text-align: center;
 }
+
+
