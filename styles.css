@@ -5,6 +5,11 @@ body {
     height: 100vh; /* Hauteur de la fenêtre */
     margin: 0; /* Supprime les marges par défaut */
     text-align: center; /* Centre le texte */
+    background-image: url('media/nuit-pluie-dans-rue.avif');
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    color: whitesmoke;
 }
 
 tr {
@@ -13,7 +18,7 @@ tr {
 }
 
 td,th {
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     font-size: 60px;
     text-align: center;
     cursor: pointer;
@@ -28,12 +33,13 @@ td,th {
 }
 
 td:hover {
-            background-color: #f0f0f0;
+            background-color: rgba(245, 245, 245, 0.5);
+            color: black;
 
 }
 
 table {
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     height: 500px;
     width: 500px;
 }
@@ -43,6 +49,14 @@ h1,h2 {
 }
 
 #resultats{
-    border: 1px solid black;
+
     margin-top: 10px;
+
+}
+
+#textSX{
+    font-weight: bold;
+}
+#textSO{
+    font-weight: bold;
 }
