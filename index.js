@@ -58,6 +58,9 @@ function Jouer(){
             element.textContent = '';});
         tabV = ["", "", "", "", "", "", "", "", ""];
         texte_info.textContent = 'Au tour du joueur X de jouer';
+        texte_info.style.color = "whitesmoke";
+        tabE.forEach(element => {
+            element.style.backgroundColor = '';})
         tour = 1;
         jeu_actif = true;
     })
@@ -73,96 +76,120 @@ function Jouer(){
 // Fonction pour tester la victoire de X
 function Tester_victoire_X(tabV){
     if (tabV[0] == tabV[1] && tabV[1] == tabV[2] && tabV[2] == 'X'){
-        cell1 = tabV[0];
-        cell2 = tabV[1];
-        cell3 = tabV[2];
-        cell3 = tabV[6];
+        cell1 = tabE[0];
+        cell2 = tabE[1];
+        cell3 = tabE[2];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[3] == tabV[4] && tabV[4] == tabV[5] && tabV[5] == 'X'){
-        cell1 = tabV[3];
-        cell2 = tabV[4];
-        cell3 = tabV[5];
-        cell3 = tabV[6];
+        cell1 = tabE[3];
+        cell2 = tabE[4];
+        cell3 = tabE[5];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[6] == tabV[7] && tabV[7] == tabV[8] && tabV[8] == 'X'){
-        cell1 = tabV[6];
-        cell2 = tabV[7];
-        cell3 = tabV[8];
-        cell3 = tabV[6];
+        cell1 = tabE[6];
+        cell2 = tabE[7];
+        cell3 = tabE[8];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[0] == tabV[3] && tabV[3] == tabV[6] && tabV[6] == 'X'){
-        cell1 = tabV[0];
-        cell2 = tabV[3];
-        cell3 = tabV[6];
-        cell3 = tabV[6];
+        cell1 = tabE[0];
+        cell2 = tabE[3];
+        cell3 = tabE[6];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[1] == tabV[4] && tabV[4] == tabV[7] && tabV[7] == 'X'){
-        cell1 = tabV[1];
-        cell2 = tabV[4];
-        cell3 = tabV[7];
-        cell3 = tabV[6];
+        cell1 = tabE[1];
+        cell2 = tabE[4];
+        cell3 = tabE[7];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[2] == tabV[5] && tabV[5] == tabV[8] && tabV[8] == 'X'){
-        cell1 = tabV[2];
-        cell2 = tabV[5];
-        cell3 = tabV[8];
-        cell3 = tabV[6];
+        cell1 = tabE[2];
+        cell2 = tabE[5];
+        cell3 = tabE[8];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[0] == tabV[4] && tabV[4] == tabV[8] && tabV[8] == 'X'){
-        cell1 = tabV[0];
-        cell2 = tabV[4];
-        cell3 = tabV[8];
-        cell3 = tabV[6];
+        cell1 = tabE[0];
+        cell2 = tabE[4];
+        cell3 = tabE[8];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[2] == tabV[4] && tabV[4] == tabV[6] && tabV[6] == 'X'){
-        cell1 = tabV[2];
-        cell2 = tabV[4];
-        cell3 = tabV[6];
-        cell3 = tabV[6];
+        cell1 = tabE[2];
+        cell2 = tabE[4];
+        cell3 = tabE[6];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur X à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreX.textContent++;
         sonV.play();
         jeu_actif = false;
@@ -175,95 +202,120 @@ function Tester_victoire_X(tabV){
 // Fonction pour tester la victoire de O
 function Tester_victoire_O(tabV){
     if (tabV[0] == tabV[1] && tabV[1] == tabV[2] && tabV[2] == 'O'){
-        cell1 = tabV[0];
-        cell2 = tabV[1];
-        cell3 = tabV[2];
-        cell3 = tabV[6];
+        cell1 = tabE[0];
+        cell2 = tabE[1];
+        cell3 = tabE[2];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[3] == tabV[4] && tabV[4] == tabV[5] && tabV[5] == 'O'){
-        cell1 = tabV[3];
-        cell2 = tabV[4];
-        cell3 = tabV[5];
-        cell3 = tabV[6];
+        cell1 = tabE[3];
+        cell2 = tabE[4];
+        cell3 = tabE[5];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[6] == tabV[7] && tabV[7] == tabV[8] && tabV[8] == 'O'){
-        cell1 = tabV[6];
-        cell2 = tabV[7];
-        cell3 = tabV[8];
-        cell3 = tabV[6];
+        cell1 = tabE[6];
+        cell2 = tabE[7];
+        cell3 = tabE[8];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[0] == tabV[3] && tabV[3] == tabV[6] && tabV[6] == 'O'){
-        cell1 = tabV[0];
-        cell2 = tabV[3];
-        cell3 = tabV[6];
-        cell3 = tabV[6];
+        cell1 = tabE[0];
+        cell2 = tabE[3];
+        cell3 = tabE[6];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[1] == tabV[4] && tabV[4] == tabV[7] && tabV[7] == 'O'){
-        cell1 = tabV[1];
-        cell2 = tabV[4];
-        cell3 = tabV[7];
-        cell3 = tabV[6];
+        cell1 = tabE[1];
+        cell2 = tabE[4];
+        cell3 = tabE[7];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;;
     }
     if (tabV[2] == tabV[5] && tabV[5] == tabV[8] && tabV[8] == 'O'){
-        cell1 = tabV[2];
-        cell2 = tabV[5];
-        cell3 = tabV[8];
-        cell3 = tabV[6];
+        cell1 = tabE[2];
+        cell2 = tabE[5];
+        cell3 = tabE[8];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[0] == tabV[4] && tabV[4] == tabV[8] && tabV[8] == 'O'){
-        cell1 = tabV[0];
-        cell2 = tabV[4];
-        cell3 = tabV[8];
-        cell3 = tabV[6];
+        cell1 = tabE[0];
+        cell2 = tabE[4];
+        cell3 = tabE[8];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
         return tab_vic;
     }
     if (tabV[2] == tabV[4] && tabV[4] == tabV[6] && tabV[6] == 'O'){
-        cell1 = tabV[2];
-        cell2 = tabV[4];
-        cell3 = tabV[6];
+        cell1 = tabE[2];
+        cell2 = tabE[4];
+        cell3 = tabE[6];
         var tab_vic = new Array(cell1, cell2, cell3);
+        tab_vic.forEach(element => {
+            element.style.backgroundColor = 'rgba(0, 128, 0, 0.5)';
+        })
         texte_info.textContent = 'Le joueur O à gagné';
+        texte_info.style.color = 'rgb(0, 128, 0)';
         scoreO.textContent++;
         sonV.play();
         jeu_actif = false;
@@ -277,6 +329,10 @@ function Egalite(tabE){
     const allFilled = [...tabE].every(cell => cell.textContent !== '');
     if (allFilled) {
         texte_info.textContent = 'Egalité';
+        texte_info.style.color = 'gray';
+        tabE.forEach(element => {
+            element.style.backgroundColor = 'rgba(128, 128, 128, 0.8)';
+        })
         sonE.play()
         jeu_actif = false;
     }
