@@ -2,13 +2,7 @@
 var tabR = document.getElementById('tab')
 
 // Tableau virtuel
-var tabV = new Array();
-for(var i=0; i<3; i++)
-    tabV[i] = new Array();
-
-for(var i=0; i<3; i++)
-    for(var j=0; j<3; j++)
-        tabV[i][j] = '';
+var tabV = new Array("", "", "", "", "", "", "", "", "");
 
 // Tableau contenant les differentes cases à cocher
 const tabE = document.querySelectorAll('td')
@@ -17,6 +11,11 @@ jeu_actif = true;
 var tour = 1;
 texte_info = document.getElementById('text_info')
 texte_info.textContent = 'Au tour du joueur X de jouer'
+var scoreX = document.getElementById('textSX');
+var scoreO = document.getElementById('textSO');
+
+// Bouton recommencer
+var bouton = document.getElementById('recommencer')
 
 // Fonction pour jouer
 function Jouer(){
@@ -46,6 +45,15 @@ function Jouer(){
             }
         });
     });
+
+    bouton.addEventListener('click', function(){
+        tabE.forEach(element => {
+            element.textContent = '';});
+        tabV = ["", "", "", "", "", "", "", "", ""];
+        texte_info.textContent = 'Au tour du joueur X de jouer';
+        tour = 1;
+        jeu_actif = true;
+    })
 }
 
 
@@ -64,6 +72,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -74,6 +83,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -84,6 +94,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -94,6 +105,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -104,6 +116,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -114,6 +127,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -124,6 +138,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -134,6 +149,7 @@ function Tester_victoire_X(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur X à gagné';
+        scoreX.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -150,6 +166,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -160,6 +177,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -170,6 +188,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -180,6 +199,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -190,6 +210,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;;
     }
@@ -200,6 +221,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -210,6 +232,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
     }
@@ -219,6 +242,7 @@ function Tester_victoire_O(tabV){
         cell3 = tabV[6];
         var tab_vic = new Array(cell1, cell2, cell3);
         texte_info.textContent = 'Le joueur O à gagné';
+        scoreO.textContent++;
         jeu_actif = false;
         return tab_vic;
         

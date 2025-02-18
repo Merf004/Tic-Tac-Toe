@@ -12,7 +12,7 @@ tr {
     width: 150px;
 }
 
-td {
+td,th {
     border: 1px solid black;
     font-size: 60px;
     text-align: center;
@@ -42,4 +42,7 @@ h1,h2 {
     text-align: center;
 }
 
-
+#resultats{
+    border: 1px solid black;
+    margin-top: 10px;
+}
